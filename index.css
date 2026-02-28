@@ -19,6 +19,8 @@ body {
   animation: gradientBG 15s ease infinite;
   color: var(--text);
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes gradientBG {
@@ -59,9 +61,14 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-header h1 { font-size: 1.8rem; }
+header h1 { 
+  font-size: 1.8rem;
+  margin: 0;
+}
 
-nav { margin-top: 10px; }
+nav { 
+  margin-top: 10px;
+}
 
 nav a {
   color: white;
@@ -71,7 +78,9 @@ nav a {
   transition: 0.3s;
 }
 
-nav a:hover { color: #a3bffa; }
+nav a:hover { 
+  color: #a3bffa;
+}
 
 /* Hero */
 .hero {
@@ -109,18 +118,31 @@ nav a:hover { color: #a3bffa; }
   50% { box-shadow: 0 0 16px var(--accent),0 0 40px var(--accent), inset 0 0 20px #a5b4fc;}
 }
 
-.hero h2 { font-size: 2rem; color: var(--primary); }
+.hero h2 { 
+  font-size: 2rem;
+  color: var(--primary);
+  margin: 0;
+}
 
-.hero p { max-width: 700px; color: var(--secondary); }
+.hero h4 {
+  margin: 0;
+}
+
+.hero p { 
+  max-width: 700px;
+  color: var(--secondary);
+}
 
 /* Sections */
-.section { padding: 70px 0; }
+.section { 
+  padding: 70px 0;
+}
 
 .section-title { 
-  font-size: 1.8rem; 
-  margin-bottom: 40px; 
-  color: var(--primary); 
-  text-align: center; 
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: var(--primary);
+  text-align: center;
 }
 
 /* Cards */
@@ -134,18 +156,28 @@ nav a:hover { color: #a3bffa; }
 }
 
 .card:hover { 
-  background: var(--hover-card); 
-  transform: translateY(-5px); 
+  background: var(--hover-card);
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin: 10px 0;
 }
 
 /* Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
-ul { padding-left: 20px; }
+ul { 
+  padding-left: 20px;
+}
 
 /* Buttons */
 .button {
@@ -157,6 +189,8 @@ ul { padding-left: 20px; }
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .button:hover {
@@ -175,9 +209,41 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile */
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .hero { padding: 60px 10px; }
-  .hero h2 { font-size: 1.6rem; }
-  .hero img { width: 140px; height: 140px; }
+  .hero { 
+    padding: 60px 10px;
+  }
+  
+  .hero h2 { 
+    font-size: 1.6rem;
+  }
+  
+  .hero img { 
+    width: 140px;
+    height: 140px;
+  }
+  
+  nav a {
+    margin-right: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
 }
