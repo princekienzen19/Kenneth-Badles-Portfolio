@@ -3,7 +3,7 @@
 A responsive, modern portfolio website showcasing professional experience and skills.
 
 ## 🌐 Live Demo
-[View Portfolio](https://princekienzen19.github.io/Kenneth-Badles-Portfolio/)
+[View Portfolio]([https://princekienzen19.github.io/Kenneth-Badles-Portfolio/](https://www.linkedin.com/in/kenneth-badles-838450346/)
 
 ## 📁 Project Structure
 - `index.html` - Main HTML file
