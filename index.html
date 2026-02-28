@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papY+H8d0N+g1oefzS6Q1T+6lRdpnRJo0x7/pPbF8yIYbhLhgZ3JXKJ+V6w9v3rTp5iw+Vu6JD8y9xJ/+aU2VA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KENNETH O. BADLES | PROFESSIONAL PORTFOLIO</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+:root {
+  --primary: #1e3a8a;      /* dark professional blue */
+  --secondary: #64748b;    /* muted gray-blue */
+  --accent: #3b82f6;       /* bright accent blue */
+  --bg-start: #e0f2fe;     /* gradient start */
+  --bg-end: #dbeafe;       /* gradient end */
+  --card: #ffffff;
+  --text: #1e293b;
+  --hover-card: #e0e7ff;
+  --button-bg: #3b82f6;
+  --button-hover: #2563eb;
+}
+
+/* Gradient animated background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, var(--bg-start), var(--bg-end), #a5b4fc, #93c5fd);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Cursor */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s ease;
+  z-index: 9999;
+  box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+header h1 { font-size: 1.8rem; }
+nav { margin-top: 10px; }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover { color: #a3bffa; }
+
+/* Hero */
+.hero {
+  padding: 80px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.hero img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid var(--primary);
+  padding: 5px;
+  background: white;
+  box-shadow:
+    0 0 8px var(--accent),
+    0 0 20px var(--accent),
+    inset 0 0 10px #a5b4fc;
+  transition: box-shadow 0.6s ease, transform 0.3s ease;
+}
+.hero img:hover {
+  animation: pulseGlow 2s infinite;
+  transform: scale(1.05);
+}
+@keyframes pulseGlow {
+  0%,100% { box-shadow: 0 0 8px var(--accent), 0 0 20px var(--accent), inset 0 0 10px #a5b4fc;}
+  50% { box-shadow: 0 0 16px var(--accent),0 0 40px var(--accent), inset 0 0 20px #a5b4fc;}
+}
+.hero h2 { font-size: 2rem; color: var(--primary); }
+.hero p { max-width: 700px; color: var(--secondary); }
+
+/* Sections */
+.section { padding: 70px 0; }
+.section-title { font-size: 1.8rem; margin-bottom: 40px; color: var(--primary); text-align: center; }
+
+/* Cards */
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.card:hover { background: var(--hover-card); transform: translateY(-5px); }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+ul { padding-left: 20px; }
+
+/* Buttons */
+.button {
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero { padding: 60px 10px; }
+  .hero h2 { font-size: 1.6rem; }
+  .hero img { width: 140px; height: 140px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cursor"></div>
+
+<!-- Header -->
+<header class="animate__animated animate__fadeInDown">
+  <div class="container">
+    <h1>KENNETH O. BADLES</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero animate__animated animate__fadeInUp">
+  <div class="container">
+    <img src="Picture1.png" alt="Kenneth O. Badles">
+    <h2>Data Entry Specialist | IT-Support | Bid Coordinator | Administrative Professional</h2>
+    <h4>
+      Experienced professional skilled in data management, IT support, and administrative tasks, with strong attention to detail, technical skills, and organizational efficiency.
+    </h4>
+  </div>
+</section>
+<br>
+<!-- Personal Information -->
+<section id="about" class="section animate__animated animate__fadeInLeft">
+  <div class="container">
+  <br>
+  <br>
+    <h2 class="section-title">Personal Information</h2>
+    <div class="card">
+      <p><strong>Full Name:</strong> Kenneth O. Badles</p>
+      <p><strong>Birthdate:</strong> July 19, 1996</p>
+      <p><strong>Address:</strong> B19 L30 Countryhomes Phase 1, Sardonyx Street, Brgy. Cabantian, Davao City</p>
+      <p><strong>LinkedIn:</strong> <a href="#" target="_blank">https://www.linkedin.com/in/kenneth-badles-838450346/</a></p>
+      <p><strong>Summary:</strong> Skilled in administrative tasks, technical support, data entry, and creative editing.</p>
+    </div>
+  </div>
+</section>
+<br>
+<!-- Skills -->
+<section id="skills" class="section animate__animated animate__fadeInRight">
+  <div class="container">
+  <br>
+  <br>
+    <h2 class="section-title">Core Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Administrative</h3><ul><li>Data Entry & Records</li><li>File Organization</li><li>File Presentations</li><li>Email Management</li></ul></div>
+      <div class="card"><h3>Technical</h3><ul><li>Computer & Network Support</li><li>Hardware Troubleshooting</li><li>Software Troubleshooting</li><li>Printer Troubleshooting</li></ul></div>
+      <div class="card"><h3>Creative</h3><ul><li>Photo & Video Editing</li></ul></div>
+      <div class="card"><h3>Soft Skills</h3><ul><li>Leadership</li><li> Team Coordination</li><li>Time Management</li><li>Analytical & Critical Thinking</li><li>High Attention to Detail</li><li>Effective Communication</li><li>Active Listening Skills</li><li>Adaptability</li></ul></div>
+    </div>
+  </div>
+</section>
+<br>
+<!-- Experience -->
+<section id="experience" class="section animate__animated animate__fadeInLeft">
+  <div class="container">
+  <br>
+  <br>
+    <h2 class="section-title">Work Experience</h2>
+    <div class="card"><h3>ROSBILL CONSTRUCTION & SUPPLY</h3><p>April 2021 – January 2025</p><p>IT-Support | Data Entry Specialist | Bid Coordinator </p></div>
+    <div class="card"><h3>DAVAO UNICAR CORPORATION (NISSAN)</h3><p>January 2021 – April 2021</p><p>Data Entry Specialist</p></div>
+    <div class="card"><h3>RITZTOK CONSTRUCTION & SUPPLY</h3><p>August 2017 – June 2019</p>Office Encoder | Bid Coordinator | Admin Associate</p></div>
+  </div>
+</section>
+<br>
+<!-- Education -->
+<section id="education" class="section animate__animated animate__fadeInRight">
+  <div class="container">
+  <br>
+  <br>
+    <h2 class="section-title">Education</h2>
+    <div class="card"><p>2015 – 2017<p><h3>STI College of Davao</h3><p>2 Years - Information Technology Program</p></div>
+    <div class="card"><p>2012 – 2014<h3>University of Southeastern Philippines</h3><p>Bachelor of Computer Technology (Undergraduate)</p></div>
+  </div>
+</section>
+
+<!-- Contact / Get in Touch -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="card">
+      <h3><i class="fa-solid fa-envelope"></i> Email: <strong>kennethbadles19@gmail.com</strong></h3>
+      <h3><i class="fa-solid fa-phone"></i> Phone: <strong>0991-374-2352 / 0965-935-8219</strong></h3>
+      <br>
+      <a href="mailto:kennethbadles19@gmail.com" class="button"><i class="fa-solid fa-paper-plane"></i> Send Email</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="animate__animated animate__fadeInUp">
+  <div class="container">
+    <p>© 2026 Kenneth O. Badles. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Cursor Script -->
+<script>
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", e => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+</script>
+
+</body>
+</html>
