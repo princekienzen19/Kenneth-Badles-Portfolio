@@ -150,7 +150,7 @@ nav a:hover::after {
 section {
   height: 100vh;               /* exact full screen */
   scroll-snap-align: start;    /* 🔥 snap each section */
-  padding: 110px 0;
+  padding: 120px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,7 +165,7 @@ section {
   -webkit-text-fill-color: transparent;
 
   /* ✅ Add extra space after the title */
-  margin-bottom: 80px; /* increase from 60px to 80px for one extra line */
+  margin-bottom: 50px; /* increase from 60px to 80px for one extra line */
 }
 
 .section .card:first-child {
