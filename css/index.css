@@ -256,22 +256,15 @@ section {
 }
 
 /* LINKEDIN BUTTON INSIDE CARD */
-.card a.button-linkedin {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 10px;
-  background-color: #0A66C2;
-  color: white;            /* forces text to white */
+.card a.link-blue {
+  color: #0d6efd;       /* standard blue */
+  text-decoration: underline;
   font-weight: 600;
-  text-decoration: none;
   transition: 0.3s;
 }
 
-.card a.button-linkedin:hover {
-  background-color: #004182;
-  color: white;            /* ensure text stays white on hover */
+.card a.link-blue:hover {
+  color: #1a73e8;       /* slightly darker on hover */
 }
 
 .link-blue {
