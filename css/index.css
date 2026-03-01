@@ -165,7 +165,7 @@ section {
   -webkit-text-fill-color: transparent;
 
   /* ✅ Add extra space after the title */
-  margin-bottom: 60px; /* increase from 60px to 80px for one extra line */
+  margin-bottom: 80px; /* increase from 60px to 80px for one extra line */
 }
 
 .section .card:first-child {
