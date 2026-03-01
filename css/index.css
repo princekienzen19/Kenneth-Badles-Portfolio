@@ -148,7 +148,7 @@ nav a:hover::after {
 
 /* SECTION */
 section {
-  padding: 120px 0;
+  padding: 140px 0;
   scroll-margin-top: 100px; /* adjust to header height */
 }
 
@@ -161,7 +161,7 @@ section {
   -webkit-text-fill-color: transparent;
 
   /* ✅ Add extra space after the title */
-  margin-bottom: 80px; /* increase from 60px to 80px for one extra line */
+  margin-bottom: 70px; /* increase from 60px to 80px for one extra line */
 }
 
 .section .card:first-child {
