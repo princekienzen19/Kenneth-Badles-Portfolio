@@ -156,7 +156,7 @@ section {
   font-size: 2.3rem;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 60px; /* consistent spacing */
+  margin-bottom: 80px; /* increase from 60px to 80px for 1 extra "line" of space */
   background: linear-gradient(90deg,var(--primary),var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
