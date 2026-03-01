@@ -411,3 +411,35 @@ background: linear-gradient(var(--primary),var(--secondary));
 border-radius: 10px;
 
 }
+
+/* PERSONAL INFORMATION WHITE CARD FIX */
+#personal-info,
+.personal-info {
+    background: #ffffff !important;
+    color: #0a0a0a !important;
+    padding: 30px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08) !important;
+    border: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+/* fix text inside */
+#personal-info h1,
+#personal-info h2,
+#personal-info h3,
+#personal-info p,
+#personal-info li,
+.personal-info h1,
+.personal-info h2,
+.personal-info h3,
+.personal-info p,
+.personal-info li {
+    color: #111 !important;
+}
+
+/* optional hover effect */
+#personal-info:hover,
+.personal-info:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
