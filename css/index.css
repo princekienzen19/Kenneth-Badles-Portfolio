@@ -266,6 +266,23 @@ section {
   color: #1a73e8;           /* slightly darker on hover */
 }
 
+/* LINKEDIN BUTTON STYLE */
+.button-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background-color: #0A66C2;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.button-linkedin:hover {
+  background-color: #004182;
+}
 /* BUTTON */
 .button {
   display: inline-block;
