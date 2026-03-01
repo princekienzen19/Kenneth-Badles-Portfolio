@@ -147,12 +147,9 @@ nav a:hover::after {
 
 /* SECTION */
 section {
-  min-height: 100vh;        /* each section fills full screen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* center content vertically */
-  padding: 120px 0;         /* keep spacing */
-  scroll-margin-top: 120px; /* prevents sticky header overlap */
+  min-height: 100vh;
+  padding: 160px 0;          /* ⬅ increased from 120px */
+  scroll-margin-top: 120px;
 }
 
 .section-title {
