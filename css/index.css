@@ -20,49 +20,20 @@
 
 }
 
-/* Personal Information Section - White Style */
-#personal,
-#about,
-.personal-info {
+#personal .card {
 
-  background: rgba(255, 255, 255, 0.95);
+  background: white;
 
   color: #0f172a;
 
-  border-radius: 20px;
+  border-radius: 16px;
 
-  padding: 40px;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-
-  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 
   border: 1px solid rgba(0,0,0,0.08);
 
-  transition: 0.3s ease;
-
 }
 
-
-/* Text inside */
-#personal p,
-#personal li,
-#about p,
-.personal-info p {
-
-  color: #334155;
-
-}
-
-
-/* Title inside white section */
-#personal h2,
-#about h2,
-.personal-info h2 {
-
-  color: #1e3a8a;
-
-}
 /* GLOBAL RESET */
 * {
 margin: 0;
