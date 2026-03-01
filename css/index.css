@@ -147,7 +147,10 @@ nav a:hover::after {
 
 /* SECTION */
 .section {
-  padding: 100px 0;
+  padding: 120px 0;
+}
+.section-title {
+  margin-bottom: 40px;
 }
 
 
