@@ -148,14 +148,10 @@ nav a:hover::after {
 
 /* SECTION */
 section {
-  height: 100vh;               /* exact full screen */
-  scroll-snap-align: start;    /* 🔥 snap each section */
-  padding: 120px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  padding: 100px 0;
 }
-
 .section-title {
   font-size: 2.3rem;
   font-weight: 800;
@@ -165,7 +161,7 @@ section {
   -webkit-text-fill-color: transparent;
 
   /* ✅ Add extra space after the title */
-  margin-bottom: 60px; /* increase from 60px to 80px for one extra line */
+  margin-bottom: 50px; /* increase from 60px to 80px for one extra line */
 }
 
 .section .card:first-child {
