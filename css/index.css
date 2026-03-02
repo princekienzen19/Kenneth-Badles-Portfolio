@@ -110,6 +110,19 @@ nav a:hover::after {
   width: 100%;
 }
 
+/* Add this CSS to your stylesheet or inside <style> tag in the HTML */
+nav a {
+  font-family: 'Cursive', 'Segoe Script', 'Brush Script MT', sans-serif;
+  font-size: 18px; /* Optional: Adjust the size of the font */
+  text-decoration: none; /* Removes underline from links */
+  color: #333; /* Optional: Change the text color */
+  transition: all 0.3s ease; /* Optional: smooth hover effect */
+}
+
+nav a:hover {
+  color: #007BFF; /* Optional: Change color on hover */
+}
+
 
 /* HERO */
 .hero {
