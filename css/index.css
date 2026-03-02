@@ -250,15 +250,20 @@ section {
 
 /* CONTACT ICON STYLE */
 .contact-icon {
+  display: inline-block;
   margin-right: 10px;
   font-size: 1.2rem;
-
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
+  color: var(--primary);          /* Use solid color first */
   text-shadow: 0 0 12px rgba(56,189,248,0.6);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+  color: var(--secondary);
+  text-shadow:
+    0 0 18px rgba(56,189,248,0.9),
+    0 0 25px rgba(139,92,246,0.7);
 }
 
 .contact-icon:hover {
