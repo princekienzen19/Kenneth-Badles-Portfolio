@@ -469,7 +469,7 @@ section + section {
 }
 
 /* Date (Years of Experience) Styling */
-.experience-date {
+#experience .experience-date {
   color: #f8fafc; /* Set color to white for consistency */
   font-weight: 600;
   font-size: 1rem; /* Adjust size if needed */
@@ -477,7 +477,7 @@ section + section {
 }
 
 /* Role (Experience Role) Styling */
-.experience-role {
+#experience .experience-role {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--primary);
@@ -496,13 +496,13 @@ section + section {
   margin-bottom: 50px; /* Increased space between the section title and first work experience card */
 }
 
-/* Global padding for section to make it more responsive */
+/* Global padding for experience section */
 #experience .container {
   padding: 20px;
 }
 
 /* CARD STYLES */
-.card {
+#experience .card {
   background: var(--card-bg);
   border-radius: 20px;
   padding: 30px;
@@ -514,7 +514,7 @@ section + section {
   margin-bottom: 40px; /* Adds space between different work experience cards */
 }
 
-.card h3 {
+#experience .card h3 {
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 20px;
@@ -522,11 +522,11 @@ section + section {
   text-shadow: 0 0 10px rgba(56,189,248,0.4);
 }
 
-.card ul {
+#experience .card ul {
   padding-left: 20px;
 }
 
-.card ul li {
+#experience .card ul li {
   font-size: 1.05rem;
   font-weight: 600;
   margin-bottom: 15px;
@@ -534,58 +534,31 @@ section + section {
   transition: 0.3s;
 }
 
-.card ul li:hover {
+#experience .card ul li:hover {
   color: var(--primary);
   transform: translateX(6px);
 }
 
-/* Links inside cards */
-.card a {
-  color: var(--text-main);
-  text-decoration: none;
-}
-
-.card a.link-blue {
-  color: #0d6efd; /* standard blue */
-  text-decoration: underline;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.card a.link-blue:hover {
-  color: #1a73e8; /* slightly darker on hover */
-}
-
-/* Add spacing between Work Experience cards */
-#experience .card {
-  margin-bottom: 30px; /* same visual spacing as Core Skills */
-}
-
-/* Add spacing between Work Experience title and first card */
-#experience .card:first-child {
-  margin-top: 30px; /* adjust as needed */
-}
-
 /* Experience Header Section (Dates & Roles) */
-.experience-header {
+#experience .experience-header {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column; /* Stack date and role vertically */
   gap: 10px; /* Space between date and role */
 }
 
-.experience-date,
-.experience-role {
+#experience .experience-date,
+#experience .experience-role {
   font-weight: 600;
   color: var(--text-muted);
   font-size: 1rem;
 }
 
-.experience-date {
+#experience .experience-date {
   margin-bottom: 5px; /* Adds space below the date */
 }
 
-.experience-role {
+#experience .experience-role {
   font-size: 1.1rem;
   color: var(--primary);
 }
