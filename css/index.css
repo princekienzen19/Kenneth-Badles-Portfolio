@@ -255,11 +255,10 @@ section {
   font-weight: 600;
 }
 
-/* Increase text size for personal info card */
+/* Personal Information Section */
 #about .card p {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  font-size: 1.2rem;  /* Increase font size */
+  font-weight: 600;
 }
 
 #about .card p .label-core {
