@@ -232,14 +232,10 @@ section {
   margin-top: 30px; /* adjust as needed */
 }
 
-/* Add spacing between Education cards */
+/* Education section spacing */
 #education .card {
-  margin-bottom: 30px; /* same visual spacing as Core Skills */
-}
-
-/* Add spacing between Education title and first card */
-#education .card:first-child {
-  margin-top: 30px; /* adjust as needed */
+  margin-top: 30px;    /* space from previous content or title */
+  margin-bottom: 30px; /* space between cards */
 }
 
 /* FIX CONTACT H4 */
