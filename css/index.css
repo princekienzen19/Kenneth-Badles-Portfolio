@@ -243,7 +243,7 @@ section {
 
 
 /* STRONG TEXT */
-.card strong {
+.label {
   color: var(--primary);
   font-weight: 800;
 }
