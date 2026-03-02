@@ -281,14 +281,14 @@ section {
 
 /* Objective paragraph */
 .objective {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.7;
-  padding: 0 10px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  .objective {
+    font-size: 1.2rem;
+  }
 }
 
 /* CONTACT ICON STYLE */
