@@ -222,6 +222,13 @@ section {
   text-shadow: 0 0 10px rgba(56,189,248,0.4);
 }
 
+/* Work Experience cards spacing */
+#experience .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* same gap as in skills */
+}
+
 /* FIX CONTACT H4 */
 .card h4 {
   font-weight: 600;
