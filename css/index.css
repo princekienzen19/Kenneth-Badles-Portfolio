@@ -262,6 +262,14 @@ section {
   transition: none;            /* no hover transition needed */
 }
 
+/* Text Styles */
+.gradient-text {
+  background: linear-gradient(90deg, #38bdf8, #8b5cf6); /* blue-purple gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
 /* CONTACT ICON STYLE */
 .contact-icon {
   display: inline-block;
