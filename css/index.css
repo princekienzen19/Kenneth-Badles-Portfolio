@@ -256,10 +256,10 @@ section {
 
 .label-core {
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.4rem; /* same as h3 */
   color: var(--primary);
   display: inline-block;
-  text-shadow: 0 0 6px rgba(56,189,248,0.3);
+  text-shadow: 0 0 10px rgba(56,189,248,0.4); /* exact same as h3 */
 }
 
 /* CONTACT ICON STYLE */
