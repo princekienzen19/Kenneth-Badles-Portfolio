@@ -254,6 +254,12 @@ section {
   background-clip: text;
 }
 
+.label-core {
+  font-weight: 800;
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
 /* CONTACT ICON STYLE */
 .contact-icon {
   display: inline-block;
