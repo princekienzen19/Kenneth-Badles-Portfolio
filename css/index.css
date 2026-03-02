@@ -241,9 +241,13 @@ section {
   transform: translateX(6px);
 }
 
-.label.gradient-text {
-  color: transparent; /* ensures gradient is visible */
+.label {
   font-weight: 800;
+  color: var(--primary); /* default solid color */
+}
+
+.label.gradient-text {
+  color: transparent;
   background: linear-gradient(90deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
