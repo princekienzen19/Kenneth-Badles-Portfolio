@@ -1,17 +1,24 @@
-/* Root Colors */
 :root {
-  --bg-main: #0f172a;
-  --bg-secondary: #020617;
-  --card-bg: linear-gradient(145deg, #0f172a, #020617);
-  --primary: #38bdf8;
-  --secondary: #8b5cf6;
-  --accent: #22c55e;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border: rgba(255,255,255,0.08);
-  --glow-primary: 0 0 20px rgba(56,189,248,0.6);
-  --glow-secondary: 0 0 20px rgba(139,92,246,0.6);
+
+/* COLOR SYSTEM */
+--bg-main: #0f172a;
+--bg-secondary: #020617;
+
+--card-bg: linear-gradient(145deg, #0f172a, #020617);
+
+--primary: #38bdf8;
+--secondary: #8b5cf6;
+--accent: #22c55e;
+
+--text-main: #f8fafc;
+--text-muted: #94a3b8;
+
+--border: rgba(255,255,255,0.08);
+
+--glow-primary: 0 0 20px rgba(56,189,248,0.6);
+--glow-secondary: 0 0 20px rgba(139,92,246,0.6);
 }
+
 
 /* RESET */
 * {
@@ -22,28 +29,33 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory; /* 🔥 add this */
+  scroll-snap-type: y mandatory;   /* 🔥 add this */
 }
 
+
+/* BODY */
 body {
   font-family: 'Poppins', sans-serif;
   background:
     radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 40%),
     radial-gradient(circle at bottom right, rgba(139,92,246,0.15), transparent 40%),
     var(--bg-secondary);
+
   color: var(--text-main);
   min-height: 100vh;
   line-height: 1.7;
 }
 
-/* Container */
+
+/* CONTAINER */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* Header */
+
+/* HEADER */
 header {
   background: rgba(2,6,23,0.85);
   backdrop-filter: blur(16px);
@@ -62,12 +74,13 @@ header h1 {
   -webkit-text-fill-color: transparent;
 }
 
+/* Remove underline from the clickable name */
 header h1 a {
-  text-decoration: none;
-  color: var(--text-main);
+  text-decoration: none;  /* Remove underline */
+  color: var(--text-main); /* Ensure the color matches the rest of the text */
 }
 
-/* Navigation */
+/* NAV */
 nav a {
   color: var(--text-muted);
   margin-right: 25px;
@@ -97,7 +110,8 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Hero Section */
+
+/* HERO */
 .hero {
   text-align: center;
   padding: 120px 20px;
@@ -108,13 +122,17 @@ nav a:hover::after {
   height: 180px;
   border-radius: 50%;
   border: 3px solid var(--primary);
-  box-shadow: 0 0 30px rgba(56,189,248,0.6), 0 0 60px rgba(139,92,246,0.4);
+  box-shadow:
+    0 0 30px rgba(56,189,248,0.6),
+    0 0 60px rgba(139,92,246,0.4);
   transition: 0.4s;
 }
 
 .hero img:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 50px rgba(56,189,248,0.9), 0 0 90px rgba(139,92,246,0.7);
+  box-shadow:
+    0 0 50px rgba(56,189,248,0.9),
+    0 0 90px rgba(139,92,246,0.7);
 }
 
 .hero h2 {
@@ -136,16 +154,18 @@ nav a:hover::after {
   letter-spacing: 1.5px;
   line-height: 1.2;
   margin-top: 20px;
+
   background: linear-gradient(90deg, var(--primary), var(--accent)) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
 }
 
-/* Sections */
+
+/* SECTION */
 section {
   padding: 140px 0;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 100px; /* adjust to header height */
 }
 
 .section-title {
@@ -155,20 +175,51 @@ section {
   background: linear-gradient(90deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 70px;
+
+  /* ✅ Add extra space after the title */
+  margin-bottom: 70px; /* increase from 60px to 80px for one extra line */
 }
 
-/* Experience Section */
-#experience .card {
+.section .card:first-child {
+  margin-top: 0; /* optional: ensures first card doesn’t collapse spacing */
+}
+
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 30px;
+}
+
+
+/* CARD */
+.card {
   background: var(--card-bg);
   border-radius: 20px;
   padding: 30px;
   border: 1px solid var(--border);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.45), inset 0 0 20px rgba(56,189,248,0.05);
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.45),
+    inset 0 0 20px rgba(56,189,248,0.05);
   transition: all 0.35s ease;
+
+  /* 🔥 FORCE ALL TEXT WHITE INSIDE CARD */
+  color: var(--text-main);
 }
 
-#experience .card h3 {
+
+/* CARD HOVER */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 25px 50px rgba(0,0,0,0.6),
+    0 0 25px rgba(56,189,248,0.25);
+}
+
+
+/* CARD HEADINGS */
+.card h3 {
   font-size: 1.4rem;
   font-weight: 800;
   margin-bottom: 15px;
@@ -176,75 +227,217 @@ section {
   text-shadow: 0 0 10px rgba(56,189,248,0.4);
 }
 
-/* Spacing for List Items */
-#experience .card ul {
-  padding-left: 20px;
-  margin-bottom: 20px;
-  text-align: justify;
+/* Add spacing between Work Experience cards */
+#experience .card {
+  margin-bottom: 30px; /* same visual spacing as Core Skills */
 }
 
-#experience .card ul li {
+/* Add spacing between Work Experience title and first card */
+#experience .card:first-child {
+  margin-top: 30px; /* adjust as needed */
+}
+
+/* Education section spacing */
+#education .card {
+  margin-top: 30px;    /* space from previous content or title */
+  margin-bottom: 30px; /* space between cards */
+}
+
+/* FIX CONTACT H4 */
+.card h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+/* PARAGRAPHS */
+.card p {
+  font-weight: 600;
+}
+
+/* Increase text size for personal info card */
+#about .card p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#about .card p .label-core {
+  font-size: inherit;  /* ensures <strong> inherits p size */
+}
+
+/* LIST */
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
   font-size: 1.05rem;
   font-weight: 600;
-  margin-bottom: 15px;
-  line-height: 1.6;
+  margin-bottom: 10px;
   transition: 0.3s;
 }
 
-#experience .card ul li:hover {
+.card ul li:hover {
   color: var(--primary);
   transform: translateX(6px);
 }
 
-/* Additional styles for Experience Header (Dates and Roles) */
-.experience-header {
-  margin-bottom: 20px;
+/* LIST */
+.card ul {
+  padding-left: 20px;
+  list-style-type: disc; /* Ensure bullets are visible */
 }
 
-.experience-date,
-.experience-role {
-  margin: 10px 0;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-/* Education Section */
-#education .card {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-#education .card h3 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--primary);
-}
-
-#education .card p {
+.card ul li {
   font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
 
-/* Contact Section */
-#contact .card {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.card ul li:hover {
+  color: var(--primary);
+  transform: translateX(6px);
 }
 
+.label {
+  font-weight: 800;
+  color: var(--primary); /* default solid color */
+}
+
+.label.gradient-text {
+  color: transparent;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.label-core {
+  font-weight: 800;            /* keep bold */
+  color: var(--primary);       /* same color as Administrative */
+  display: inline-block;       /* needed for glow to look consistent */
+  text-shadow: 0 0 10px rgba(56,189,248,0.4); /* same glow as Administrative */
+  transition: none;            /* no hover transition needed */
+}
+
+/* Professional & aesthetic designation */
+.designation-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+
+  /* SAME STYLE AS .section-title */
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+/* Objective paragraph */
+.objective {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  .objective {
+    font-size: 1.2rem;
+  }
+}
+
+/* CONTACT ICON STYLE */
 .contact-icon {
   display: inline-block;
   margin-right: 10px;
   font-size: 1.2rem;
-  color: var(--primary);
+  color: var(--primary);          /* Use solid color first */
   text-shadow: 0 0 12px rgba(56,189,248,0.6);
   transition: all 0.3s ease;
 }
 
-.contact-icon:hover {
-  transform: scale(1.2);
-  text-shadow: 0 0 18px rgba(56,189,248,0.9), 0 0 25px rgba(139,92,246,0.7);
+/* CONTACT ROW HOVER EFFECT */
+#contact .card p {
+  transition: 0.3s ease;
 }
 
-/* Footer */
+#contact .card p:hover {
+  transform: translateX(6px);
+  text-shadow: 0 0 10px rgba(56,189,248,0.5);
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+  color: var(--secondary);
+  text-shadow:
+    0 0 18px rgba(56,189,248,0.9),
+    0 0 25px rgba(139,92,246,0.7);
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+  text-shadow:
+    0 0 18px rgba(56,189,248,0.9),
+    0 0 25px rgba(139,92,246,0.7);
+}
+
+/* FIX LINKS INSIDE CARDS (NO BLUE EMAIL ISSUE) */
+.card a {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+/* LINKEDIN BUTTON INSIDE CARD */
+.card a.link-blue {
+  color: #0d6efd;       /* standard blue */
+  text-decoration: underline;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card a.link-blue:hover {
+  color: #1a73e8;       /* slightly darker on hover */
+}
+
+.link-blue {
+  color: #0d6efd;           /* standard hyperlink color */
+  text-decoration: underline;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.link-blue:hover {
+  color: #1a73e8;           /* slightly darker on hover */
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  background: linear-gradient(90deg,var(--primary),var(--secondary));
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+  box-shadow: var(--glow-primary);
+}
+
+.button:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 40px rgba(56,189,248,0.7),
+    0 0 60px rgba(139,92,246,0.6);
+}
+
+
+/* FOOTER */
 footer {
   margin-top: 80px;
   padding: 30px;
@@ -255,30 +448,8 @@ footer {
   font-weight: 500;
 }
 
-footer p {
-  font-size: 1rem;
-}
 
-/* Button Styles */
-.button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 28px;
-  border-radius: 12px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  transition: 0.3s;
-  box-shadow: var(--glow-primary);
-}
-
-.button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 40px rgba(56,189,248,0.7), 0 0 60px rgba(139,92,246,0.6);
-}
-
-/* Scrollbar */
+/* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -287,8 +458,7 @@ footer p {
   background: linear-gradient(var(--primary),var(--secondary));
   border-radius: 10px;
 }
-
-/* Section + Section Spacing */
+/* Ensure equal spacing between all sections */
 section + section {
   margin-top: 0;
 }
