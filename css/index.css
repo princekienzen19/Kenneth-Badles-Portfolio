@@ -241,9 +241,13 @@ section {
   transform: translateX(6px);
 }
 
-.label {
-  color: var(--primary); /* solid blue */
+.label.gradient-text {
+  color: transparent; /* ensures gradient is visible */
   font-weight: 800;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* CONTACT ICON STYLE */
@@ -356,14 +360,5 @@ footer {
 /* Ensure equal spacing between all sections */
 section + section {
   margin-top: 0;
-}
-
-.gradient-text {
-  font-weight: 800;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
 }
 
