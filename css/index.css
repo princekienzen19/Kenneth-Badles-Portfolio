@@ -139,6 +139,13 @@ nav a:hover::after {
   -webkit-text-fill-color: transparent;
 }
 
+/* OVERRIDE FOR DESIGNATION */
+.hero .designation-title {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero p {
   color: var(--text-muted);
   margin-top: 15px;
