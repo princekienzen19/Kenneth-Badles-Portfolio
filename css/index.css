@@ -262,13 +262,13 @@ section {
   transition: none;            /* no hover transition needed */
 }
 
-/* Text Styles */
-.gradient-text {
-  background: linear-gradient(90deg, #38bdf8, #8b5cf6); /* blue-purple gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-}
+.glow-text {
+  color: #38bdf8;
+  text-shadow:
+    0 0 5px #38bdf8,
+    0 0 10px #38bdf8,
+    0 0 20px rgba(56,189,248,0.6);
+  font-weight: 600;
 
 /* CONTACT ICON STYLE */
 .contact-icon {
