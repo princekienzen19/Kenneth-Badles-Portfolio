@@ -262,26 +262,16 @@ section {
   transition: none;            /* no hover transition needed */
 }
 
-/* Aesthetic, professional designation */
-.designation-aesthetic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 2.4rem;                /* prominent but elegant */
-  text-align: center;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+/* Designation styled like Personal Information title */
+.designation-title {
+  font-size: 2.3rem;               /* same as section titles */
+  font-weight: 800;
+  text-align: center;               /* center it like section titles */
+  background: linear-gradient(90deg, var(--primary), var(--accent)); /* gradient like Personal Information title */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
-  letter-spacing: 1.2px;            /* subtle spacing for elegance */
-  line-height: 1.2;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 20px;
-
-  /* Subtle glow for hero effect */
-  text-shadow:
-    0 2px 6px rgba(56,189,248,0.25),
-    0 4px 12px rgba(139,92,246,0.2);
-  transition: all 0.3s ease;
 }
 
 /* Hover effect (optional, interactive touch) */
