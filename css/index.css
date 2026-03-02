@@ -356,6 +356,19 @@ section {
   transform: translateX(6px);
   text-shadow: 0 0 10px rgba(56,189,248,0.5);
 }
+/* Your existing CSS styles above */
+
+/* Increase font size for Contact Section text */
+#contact .card p {
+  font-size: 1.2rem;  /* Increase font size to match Personal Information section */
+  font-weight: 600;   /* Ensure text remains bold */
+  line-height: 1.7;   /* Adjust line height for readability */
+}
+
+/* Optionally, increase the size of the labels (like 'Email:', 'Phone:') */
+#contact .card .label {
+  font-size: 1.1rem;  /* Increase the label text size */
+}
 
 .contact-icon:hover {
   transform: scale(1.2);
