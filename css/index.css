@@ -639,8 +639,8 @@ section + section {
 
 /* Optional: Style the dates for consistency */
 #education .card p:first-of-type {
-  font-size: 1.1rem;  /* Slightly smaller font size for the date */
-  color: var(--text-muted); /* Ensure it's still readable but subtle */
+  font-size: 1.1rem;
+  color: var(--text-main); /* White text color */
 }
 
 /* Ensure equal spacing between all sections */
