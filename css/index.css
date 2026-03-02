@@ -80,28 +80,37 @@ header h1 a {
   color: var(--text-main); /* Ensure the color matches the rest of the text */
 }
 
-/* Apply the cursive font and ensure proper link styling */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
 nav a {
   font-family: 'Dancing Script', cursive;
   font-size: 22px;
   font-weight: 700;
   color: var(--text-muted);
-  margin-right: 25px;
   text-decoration: none;
   letter-spacing: 0.5px;
   text-shadow: 0 0 8px rgba(56,189,248,0.25);
   transition: all 0.3s ease;
+
+  position: relative;
+  display: inline-block;
 }
 
-/* Active link (current section) */
-nav a:hover,
-nav a.active {
-  font-weight: 700;
+nav a:hover {
   color: var(--primary);
-  transform: translateY(-1px);
-  text-shadow: 0 0 12px rgba(56,189,248,0.6);
+  text-shadow: var(--glow-primary);
 }
-/* Underline animation */
+
 nav a::after {
   content: "";
   position: absolute;
@@ -111,6 +120,10 @@ nav a::after {
   height: 2px;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* HERO */
