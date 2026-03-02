@@ -82,13 +82,16 @@ header h1 a {
 
 /* Apply the cursive font and ensure proper link styling */
 nav a {
-  font-family: 'Dancing Script', 'Cursive', 'Segoe Script', 'Brush Script MT', sans-serif;
-  font-size: 18px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px; /* slightly larger improves bold visibility */
   color: var(--text-muted);
   margin-right: 25px;
   text-decoration: none;
 
-  font-weight: 700;
+  font-weight: 700; /* max supported weight */
+  letter-spacing: 0.5px; /* improves bold readability */
+
+  text-shadow: 0 0 8px rgba(56,189,248,0.3);
 
   position: relative;
   transition: all 0.3s ease;
