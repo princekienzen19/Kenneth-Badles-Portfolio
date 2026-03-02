@@ -514,7 +514,7 @@ section + section {
   padding: 20px;
 }
 
-/* CARD STYLES */
+/* New Experience Section (Work Experience cards) */
 #experience .card {
   background: var(--card-bg);
   border-radius: 20px;
@@ -524,17 +524,31 @@ section + section {
     0 15px 35px rgba(0,0,0,0.45),
     inset 0 0 20px rgba(56,189,248,0.05);
   transition: all 0.35s ease;
-  margin-bottom: 40px; /* Adds space between different work experience cards */
+  margin-bottom: 40px; /* Space between cards */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start; /* Align items vertically */
+  align-items: stretch; /* Ensure cards fill the container width */
 }
 
 #experience .card h3 {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: var(--primary);
   text-shadow: 0 0 10px rgba(56,189,248,0.4);
+  text-align: left; /* Align the heading text to the left */
 }
 
+/* Paragraphs inside Work Experience */
+#experience .card p {
+  font-weight: 600;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  text-align: justify;  /* Justify text alignment for better readability */
+}
+
+/* Ensure the list items inside cards are aligned properly */
 #experience .card ul {
   padding-left: 20px;
 }
@@ -542,8 +556,8 @@ section + section {
 #experience .card ul li {
   font-size: 1.05rem;
   font-weight: 600;
-  margin-bottom: 15px;
-  line-height: 1.6;
+  margin-bottom: 15px; /* Space between list items */
+  line-height: 1.6; /* Make text more readable */
   transition: 0.3s;
 }
 
