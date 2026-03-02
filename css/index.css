@@ -266,14 +266,26 @@ section {
 .designation-title {
   font-size: 2.3rem;               /* same as section titles */
   font-weight: 800;
-  text-align: center;               /* center it like section titles */
-  background: linear-gradient(90deg, var(--primary), var(--accent)); /* gradient like Personal Information title */
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary), var(--accent)); /* same gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;                /* a bit of space from the image */
+  margin-bottom: 15px;             /* space before objective */
+  line-height: 1.2;                /* tighter like section titles */
 }
 
+/* Objective paragraph */
+.objective {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 800px;                /* keeps text readable */
+  margin: 0 auto;                  /* center align */
+  line-height: 1.7;                /* comfortable reading */
+  padding: 0 10px;                 /* small padding for small screens */
+}
 /* CONTACT ICON STYLE */
 .contact-icon {
   display: inline-block;
