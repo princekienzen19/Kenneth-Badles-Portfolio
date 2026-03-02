@@ -82,21 +82,32 @@ header h1 a {
 
 /* Apply the cursive font and ensure proper link styling */
 nav a {
-  font-family: 'Dancing Script', 'Cursive', 'Segoe Script', 'Brush Script MT', sans-serif;  /* Cursive font */
-  font-size: 18px;  /* Optional: Adjust the size of the font */
-  color: var(--text-muted);  /* Default link color */
+  font-family: 'Dancing Script', 'Cursive', 'Segoe Script', 'Brush Script MT', sans-serif;
+  font-size: 18px;
+  color: var(--text-muted);
   margin-right: 25px;
-  text-decoration: none;  /* Remove underline */
-  font-weight: 600;  /* Adjust weight */
+  text-decoration: none;
+
+  font-weight: 700;
+
   position: relative;
-  transition: 0.3s;  /* Smooth hover effect */
+  transition: all 0.3s ease;
 }
 
+/* Active link (current section) */
+nav a.active {
+  font-weight: 800;
+  color: var(--primary);
+  text-shadow: var(--glow-primary);
+}
+
+/* Hover effect */
 nav a:hover {
-  color: var(--primary);  /* Color change on hover */
-  text-shadow: var(--glow-primary);  /* Glow effect on hover */
+  color: var(--primary);
+  text-shadow: var(--glow-primary);
 }
 
+/* Underline animation */
 nav a::after {
   content: "";
   position: absolute;
@@ -105,13 +116,12 @@ nav a::after {
   width: 0%;
   height: 2px;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
-  transition: 0.3s;
+  transition: width 0.3s ease;
 }
 
 nav a:hover::after {
-  width: 100%;  /* Underline effect on hover */
+  width: 100%;
 }
-
 
 /* HERO */
 .hero {
