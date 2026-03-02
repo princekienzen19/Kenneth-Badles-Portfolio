@@ -241,13 +241,6 @@ section {
   transform: translateX(6px);
 }
 
-
-/* STRONG TEXT */
-.label {
-  color: var(--primary);
-  font-weight: 800;
-}
-
 /* CONTACT ICON STYLE */
 .contact-icon {
   display: inline-block;
