@@ -450,67 +450,36 @@ section + section {
 }
 
 /* EXPERIENCE SECTION */
-#experience .card {
-  background: var(--card-bg);
-  border-radius: 20px;
-  padding: 30px;
-  border: 1px solid var(--border);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.45), inset 0 0 20px rgba(56,189,248,0.05);
-  transition: all 0.35s ease;
-  margin-bottom: 40px; /* Adds space between different work experience cards */
-}
-
-#experience .card h3 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-  color: var(--primary);
-  text-shadow: 0 0 10px rgba(56,189,248,0.4);
-}
-
-/* Experience Header Section (Dates & Roles) */
-.experience-header {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column; /* Stack date and role vertically */
-  gap: 10px; /* Space between date and role */
-}
-
-.experience-date,
-.experience-role {
-  font-weight: 600;
-  color: var(--text-muted);
-  font-size: 1rem;
-}
-
-.experience-date {
-  margin-bottom: 5px; /* Adds space below the date */
-}
-
-.experience-role {
-  font-size: 1.1rem;
-  color: var(--primary);
-}
-
-/* Spacing and Justification for List Items */
 #experience .card ul {
   padding-left: 20px;
-  margin-bottom: 20px;
-  text-align: justify; /* Justifies the text for better alignment */
+  margin-bottom: 20px; /* Add space between list items and card */
 }
 
 #experience .card ul li {
   font-size: 1.05rem;
   font-weight: 600;
-  margin-bottom: 15px;
-  line-height: 1.6;
+  margin-bottom: 15px; /* Space between list items */
+  line-height: 1.6; /* Make text more readable */
   transition: 0.3s;
 }
 
-/* Hover Effect for List Items */
 #experience .card ul li:hover {
   color: var(--primary);
   transform: translateX(6px);
+}
+
+/* Date (Years of Experience) Styling */
+.experience-date {
+  color: #f8fafc; /* Set color to white for consistency */
+  font-weight: 600;
+}
+
+/* Role (Experience Role) Styling */
+.experience-role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: 0.3s;
 }
 
 /* Add Spacing and Styling to the Work Experience Section Title */
@@ -527,4 +496,59 @@ section + section {
 /* Global padding for section to make it more responsive */
 #experience .container {
   padding: 20px;
+}
+
+/* CARD STYLES */
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid var(--border);
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.45),
+    inset 0 0 20px rgba(56,189,248,0.05);
+  transition: all 0.35s ease;
+  margin-bottom: 40px; /* Adds space between different work experience cards */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  transition: 0.3s;
+}
+
+.card ul li:hover {
+  color: var(--primary);
+  transform: translateX(6px);
+}
+
+/* Links inside cards */
+.card a {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.card a.link-blue {
+  color: #0d6efd;       /* standard blue */
+  text-decoration: underline;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card a.link-blue:hover {
+  color: #1a73e8;       /* slightly darker on hover */
 }
