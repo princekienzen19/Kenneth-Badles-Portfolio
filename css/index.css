@@ -268,17 +268,16 @@ section {
   font-weight: 800;
   text-align: center;
 
-  /* Gradient background for text */
-  background: linear-gradient(135deg, #38bdf8 0%, #8b5cf6 50%, #22c55e 100%);
+  /* UPDATED COLOR: match Personal Information title */
+  background: linear-gradient(90deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;   /* for Firefox */
+  background-clip: text;
+  color: transparent;
 
-  color: transparent;      /* ensures gradient shows everywhere */
   letter-spacing: 1.5px;
   line-height: 1.2;
 
-  /* Refined glow */
   text-shadow:
     0 2px 6px rgba(56,189,248,0.3),
     0 4px 10px rgba(139,92,246,0.2),
