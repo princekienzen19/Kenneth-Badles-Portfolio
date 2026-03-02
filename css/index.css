@@ -255,11 +255,19 @@ section {
 }
 
 .label-core {
-  font-weight: 800;
-  font-size: 1.4rem; /* same as h3 */
-  color: var(--primary);
-  display: inline-block;
-  text-shadow: 0 0 10px rgba(56,189,248,0.4); /* exact same as h3 */
+  font-weight: 800;            /* keep bold */
+  color: var(--primary);       /* same color as Administrative */
+  display: inline-block;       /* needed for glow to look consistent */
+  text-shadow: 0 0 10px rgba(56,189,248,0.4); /* same glow as Administrative */
+  transition: 0.3s ease-in-out; /* smooth glow transition if needed */
+}
+
+/* Optional hover effect to enhance glow on hover */
+.label-core:hover {
+  text-shadow:
+    0 0 10px rgba(56,189,248,0.4),
+    0 0 20px rgba(56,189,248,0.3),
+    0 0 30px rgba(56,189,248,0.2);
 }
 
 /* CONTACT ICON STYLE */
