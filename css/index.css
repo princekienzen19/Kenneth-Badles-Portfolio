@@ -452,7 +452,7 @@ section + section {
 /* EXPERIENCE SECTION */
 #experience .card ul {
   padding-left: 20px;
-  margin-bottom: 20px; /* Add space between list items and card */
+  margin-bottom: 20px; /* Adds space between list items and card */
 }
 
 #experience .card ul li {
@@ -472,6 +472,8 @@ section + section {
 .experience-date {
   color: #f8fafc; /* Set color to white for consistency */
   font-weight: 600;
+  font-size: 1rem; /* Adjust size if needed */
+  margin-bottom: 10px; /* Add spacing below date */
 }
 
 /* Role (Experience Role) Styling */
@@ -480,6 +482,7 @@ section + section {
   font-weight: 600;
   color: var(--primary);
   transition: 0.3s;
+  margin-bottom: 10px; /* Add spacing below role */
 }
 
 /* Add Spacing and Styling to the Work Experience Section Title */
@@ -543,12 +546,51 @@ section + section {
 }
 
 .card a.link-blue {
-  color: #0d6efd;       /* standard blue */
+  color: #0d6efd; /* standard blue */
   text-decoration: underline;
   font-weight: 600;
   transition: 0.3s;
 }
 
 .card a.link-blue:hover {
-  color: #1a73e8;       /* slightly darker on hover */
+  color: #1a73e8; /* slightly darker on hover */
+}
+
+/* Add spacing between Work Experience cards */
+#experience .card {
+  margin-bottom: 30px; /* same visual spacing as Core Skills */
+}
+
+/* Add spacing between Work Experience title and first card */
+#experience .card:first-child {
+  margin-top: 30px; /* adjust as needed */
+}
+
+/* Experience Header Section (Dates & Roles) */
+.experience-header {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stack date and role vertically */
+  gap: 10px; /* Space between date and role */
+}
+
+.experience-date,
+.experience-role {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.experience-date {
+  margin-bottom: 5px; /* Adds space below the date */
+}
+
+.experience-role {
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+/* Ensure equal spacing between all sections */
+section + section {
+  margin-top: 0;
 }
