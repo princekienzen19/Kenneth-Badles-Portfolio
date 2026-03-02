@@ -256,12 +256,10 @@ section {
 
 .label-core {
   font-weight: 800;
+  font-size: 1.4rem;
   color: var(--primary);
-  font-size: 1.2rem;
   display: inline-block;
-  text-shadow:
-    0 0 5px rgba(56,189,248,0.6),
-    0 0 10px rgba(56,189,248,0.4);
+  text-shadow: 0 0 6px rgba(56,189,248,0.3);
 }
 
 /* CONTACT ICON STYLE */
