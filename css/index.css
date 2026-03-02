@@ -234,6 +234,12 @@ section {
   font-weight: 600;
 }
 
+/* Increase text size for personal info card */
+#about .card p {
+  font-size: 1.2rem; /* adjust size as needed */
+  line-height: 1.6;
+}
+
 
 /* LIST */
 .card ul {
