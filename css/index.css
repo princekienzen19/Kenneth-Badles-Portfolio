@@ -236,10 +236,13 @@ section {
 
 /* Increase text size for personal info card */
 #about .card p {
-  font-size: 1.2rem; /* adjust size as needed */
+  font-size: 1.2rem;  /* adjust as needed */
   line-height: 1.6;
 }
 
+#about .card p .label-core {
+  font-size: inherit;  /* ensures <strong> inherits p size */
+}
 
 /* LIST */
 .card ul {
