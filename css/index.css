@@ -258,10 +258,10 @@ section {
   font-weight: 800;
   color: var(--primary);
   display: inline-block;
+  font-size: 1.1rem; /* optional */
   text-shadow:
-    0 0 5px rgba(56,189,248,0.6),
-    0 0 10px rgba(56,189,248,0.5),
-    0 0 15px rgba(56,189,248,0.4);
+    0 0 2px rgba(56,189,248,0.5),
+    0 0 5px rgba(56,189,248,0.3);
 }
 
 /* CONTACT ICON STYLE */
