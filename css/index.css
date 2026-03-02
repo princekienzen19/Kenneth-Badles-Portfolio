@@ -262,13 +262,6 @@ section {
   transition: none;            /* no hover transition needed */
 }
 
-.glow-text {
-  color: #38bdf8;
-  text-shadow:
-    0 0 5px #38bdf8,
-    0 0 10px #38bdf8,
-    0 0 20px rgba(56,189,248,0.6);
-  font-weight: 600;
 
 /* CONTACT ICON STYLE */
 .contact-icon {
