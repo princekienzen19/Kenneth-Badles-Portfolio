@@ -258,6 +258,7 @@ section {
   font-weight: 800;
   color: var(--primary);
   text-shadow: 0 0 10px rgba(56,189,248,0.4);
+  display: inline-block; /* makes glow more visible */
 }
 
 /* CONTACT ICON STYLE */
