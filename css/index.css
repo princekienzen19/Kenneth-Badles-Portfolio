@@ -262,6 +262,15 @@ section {
   transition: none;            /* no hover transition needed */
 }
 
+.designation-label {
+  font-weight: 800;
+  font-size: 2.6rem; /* same as hero h2 */
+  background: linear-gradient(90deg, var(--primary), var(--secondary)); /* same gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* allows glow */
+  text-shadow: 0 0 10px rgba(56,189,248,0.4); /* glow same as Administrative */
+}
 
 /* CONTACT ICON STYLE */
 .contact-icon {
