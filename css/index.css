@@ -439,12 +439,3 @@ footer {
 section + section {
   margin-top: 0;
 }
-
-/* ===== Universal Card Spacing ===== */
-section .card {
-  margin-bottom: 30px; /* space between cards */
-}
-
-section .card:first-child {
-  margin-top: 30px; /* space from section title */
-}
