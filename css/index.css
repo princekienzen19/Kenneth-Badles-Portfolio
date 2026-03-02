@@ -1,24 +1,17 @@
 :root {
-
-/* COLOR SYSTEM */
---bg-main: #0f172a;
---bg-secondary: #020617;
-
---card-bg: linear-gradient(145deg, #0f172a, #020617);
-
---primary: #38bdf8;
---secondary: #8b5cf6;
---accent: #22c55e;
-
---text-main: #f8fafc;
---text-muted: #94a3b8;
-
---border: rgba(255,255,255,0.08);
-
---glow-primary: 0 0 20px rgba(56,189,248,0.6);
---glow-secondary: 0 0 20px rgba(139,92,246,0.6);
+  /* COLOR SYSTEM */
+  --bg-main: #0f172a;
+  --bg-secondary: #020617;
+  --card-bg: linear-gradient(145deg, #0f172a, #020617);
+  --primary: #38bdf8;
+  --secondary: #8b5cf6;
+  --accent: #22c55e;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(255,255,255,0.08);
+  --glow-primary: 0 0 20px rgba(56,189,248,0.6);
+  --glow-secondary: 0 0 20px rgba(139,92,246,0.6);
 }
-
 
 /* RESET */
 * {
@@ -29,9 +22,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;   /* 🔥 add this */
+  scroll-snap-type: y mandatory;
 }
-
 
 /* BODY */
 body {
@@ -40,12 +32,10 @@ body {
     radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 40%),
     radial-gradient(circle at bottom right, rgba(139,92,246,0.15), transparent 40%),
     var(--bg-secondary);
-
   color: var(--text-main);
   min-height: 100vh;
   line-height: 1.7;
 }
-
 
 /* CONTAINER */
 .container {
@@ -53,7 +43,6 @@ body {
   max-width: 1200px;
   margin: auto;
 }
-
 
 /* HEADER */
 header {
@@ -74,13 +63,11 @@ header h1 {
   -webkit-text-fill-color: transparent;
 }
 
-/* Remove underline from the clickable name */
 header h1 a {
-  text-decoration: none;  /* Remove underline */
-  color: var(--text-main); /* Ensure the color matches the rest of the text */
+  text-decoration: none;
+  color: var(--text-main);
 }
 
-/* NAV */
 nav a {
   color: var(--text-muted);
   margin-right: 25px;
@@ -109,7 +96,6 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
-
 
 /* HERO */
 .hero {
@@ -147,476 +133,6 @@ nav a:hover::after {
   font-weight: 500;
 }
 
-.hero .designation-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  text-align: center;
-  letter-spacing: 1.5px;
-  line-height: 1.2;
-  margin-top: 20px;
-
-  background: linear-gradient(90deg, var(--primary), var(--accent)) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-}
-
-
 /* SECTION */
 section {
-  padding: 140px 0;
-  scroll-margin-top: 100px; /* adjust to header height */
-}
-
-.section-title {
-  font-size: 2.3rem;
-  font-weight: 800;
-  text-align: center;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* ✅ Add extra space after the title */
-  margin-bottom: 70px; /* increase from 60px to 80px for one extra line */
-}
-
-.section .card:first-child {
-  margin-top: 0; /* optional: ensures first card doesn’t collapse spacing */
-}
-
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-  gap: 30px;
-}
-
-
-/* CARD */
-.card {
-  background: var(--card-bg);
-  border-radius: 20px;
-  padding: 30px;
-  border: 1px solid var(--border);
-  box-shadow:
-    0 15px 35px rgba(0,0,0,0.45),
-    inset 0 0 20px rgba(56,189,248,0.05);
-  transition: all 0.35s ease;
-
-  /* 🔥 FORCE ALL TEXT WHITE INSIDE CARD */
-  color: var(--text-main);
-}
-
-
-/* CARD HOVER */
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow:
-    0 25px 50px rgba(0,0,0,0.6),
-    0 0 25px rgba(56,189,248,0.25);
-}
-
-
-/* CARD HEADINGS */
-.card h3 {
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-  color: var(--primary);
-  text-shadow: 0 0 10px rgba(56,189,248,0.4);
-}
-
-/* Add spacing between Work Experience cards */
-#experience .card {
-  margin-bottom: 30px; /* same visual spacing as Core Skills */
-}
-
-/* Add spacing between Work Experience title and first card */
-#experience .card:first-child {
-  margin-top: 30px; /* adjust as needed */
-}
-
-/* Education section spacing */
-#education .card {
-  margin-top: 30px;    /* space from previous content or title */
-  margin-bottom: 30px; /* space between cards */
-}
-
-/* FIX CONTACT H4 */
-.card h4 {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-
-/* PARAGRAPHS */
-.card p {
-  font-weight: 600;
-}
-
-/* Personal Information Section */
-#about .card p {
-  font-size: 1.2rem;  /* Increase font size */
-  font-weight: 600;
-}
-
-#about .card p .label-core {
-  font-size: inherit;  /* ensures <strong> inherits p size */
-}
-
-/* LIST */
-.card ul {
-  padding-left: 20px;
-}
-
-.card ul li {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
-
-.card ul li:hover {
-  color: var(--primary);
-  transform: translateX(6px);
-}
-
-.card ul li:hover {
-  color: var(--primary);
-  transform: translateX(6px);
-}
-
-.label {
-  font-weight: 800;
-  color: var(--primary); /* default solid color */
-}
-
-.label.gradient-text {
-  color: transparent;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.label-core {
-  font-weight: 800;            /* keep bold */
-  color: var(--primary);       /* same color as Administrative */
-  display: inline-block;       /* needed for glow to look consistent */
-  text-shadow: 0 0 10px rgba(56,189,248,0.4); /* same glow as Administrative */
-  transition: none;            /* no hover transition needed */
-}
-
-/* Professional & aesthetic designation */
-.designation-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  text-align: center;
-
-  /* SAME STYLE AS .section-title */
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  letter-spacing: 1.5px;
-  line-height: 1.2;
-  margin-top: 20px;
-}
-
-/* Objective paragraph */
-.objective {
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-@media (min-width: 768px) {
-  .objective {
-    font-size: 1.2rem;
-  }
-}
-
-/* CONTACT ICON STYLE */
-.contact-icon {
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 1.2rem;
-  color: var(--primary);          /* Use solid color first */
-  text-shadow: 0 0 12px rgba(56,189,248,0.6);
-  transition: all 0.3s ease;
-}
-
-/* CONTACT ROW HOVER EFFECT */
-#contact .card p {
-  transition: 0.3s ease;
-}
-
-#contact .card p:hover {
-  transform: translateX(6px);
-  text-shadow: 0 0 10px rgba(56,189,248,0.5);
-}
-/* Your existing CSS styles above */
-
-/* Increase font size for Contact Section text */
-#contact .card p {
-  font-size: 1.2rem;  /* Increase font size to match Personal Information section */
-  font-weight: 600;   /* Ensure text remains bold */
-  line-height: 1.7;   /* Adjust line height for readability */
-}
-
-/* Optionally, increase the size of the labels (like 'Email:', 'Phone:') */
-#contact .card .label {
-  font-size: 1.1rem;  /* Increase the label text size */
-}
-
-.contact-icon:hover {
-  transform: scale(1.2);
-  color: var(--secondary);
-  text-shadow:
-    0 0 18px rgba(56,189,248,0.9),
-    0 0 25px rgba(139,92,246,0.7);
-}
-
-.contact-icon:hover {
-  transform: scale(1.2);
-  text-shadow:
-    0 0 18px rgba(56,189,248,0.9),
-    0 0 25px rgba(139,92,246,0.7);
-}
-
-/* FIX LINKS INSIDE CARDS (NO BLUE EMAIL ISSUE) */
-.card a {
-  color: var(--text-main);
-  text-decoration: none;
-}
-
-/* LINKEDIN BUTTON INSIDE CARD */
-.card a.link-blue {
-  color: #0d6efd;       /* standard blue */
-  text-decoration: underline;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.card a.link-blue:hover {
-  color: #1a73e8;       /* slightly darker on hover */
-}
-
-.link-blue {
-  color: #0d6efd;           /* standard hyperlink color */
-  text-decoration: underline;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.link-blue:hover {
-  color: #1a73e8;           /* slightly darker on hover */
-}
-
-/* BUTTON */
-.button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 28px;
-  border-radius: 12px;
-  background: linear-gradient(90deg,var(--primary),var(--secondary));
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  transition: 0.3s;
-  box-shadow: var(--glow-primary);
-}
-
-.button:hover {
-  transform: scale(1.08);
-  box-shadow:
-    0 0 40px rgba(56,189,248,0.7),
-    0 0 60px rgba(139,92,246,0.6);
-}
-
-
-/* FOOTER */
-footer {
-  margin-top: 80px;
-  padding: 30px;
-  text-align: center;
-  background: rgba(2,6,23,0.9);
-  border-top: 1px solid var(--border);
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
-
-/* SCROLLBAR */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--primary),var(--secondary));
-  border-radius: 10px;
-}
-/* Ensure equal spacing between all sections */
-section + section {
-  margin-top: 0;
-}
-
-/* EXPERIENCE SECTION */
-#experience .card ul {
-  padding-left: 20px;
-  margin-bottom: 20px; /* Adds space between list items and card */
-}
-
-#experience .card ul li {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 15px; /* Space between list items */
-  line-height: 1.6; /* Make text more readable */
-  transition: 0.3s;
-}
-
-#experience .card ul li:hover {
-  color: var(--primary);
-  transform: translateX(6px);
-}
-
-/* Date (Years of Experience) Styling */
-#experience .experience-date {
-  color: #f8fafc; /* Set color to white for consistency */
-  font-weight: 600;
-  font-size: 1rem; /* Adjust size if needed */
-  margin-bottom: 10px; /* Add spacing below date */
-}
-
-/* Role (Experience Role) Styling */
-#experience .experience-role {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--primary);
-  transition: 0.3s;
-  margin-bottom: 10px; /* Add spacing below role */
-}
-
-/* Add Spacing and Styling to the Work Experience Section Title */
-#experience .section-title {
-  font-size: 2.3rem;
-  font-weight: 800;
-  text-align: center;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 50px; /* Increased space between the section title and first work experience card */
-}
-
-/* Global padding for experience section */
-#experience .container {
-  padding: 20px;
-}
-
-/* New Experience Section (Work Experience cards) */
-#experience .card {
-  background: var(--card-bg);
-  border-radius: 20px;
-  padding: 30px;
-  border: 1px solid var(--border);
-  box-shadow:
-    0 15px 35px rgba(0,0,0,0.45),
-    inset 0 0 20px rgba(56,189,248,0.05);
-  transition: all 0.35s ease;
-  margin-bottom: 40px; /* Space between cards */
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: flex-start; /* Align items vertically */
-  align-items: stretch; /* Ensure cards fill the container width */
-}
-
-#experience .card h3 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-  color: var(--primary);
-  text-shadow: 0 0 10px rgba(56,189,248,0.4);
-  text-align: left; /* Align the heading text to the left */
-}
-
-/* Paragraphs inside Work Experience */
-#experience .card p {
-  font-weight: 600;
-  line-height: 1.7;
-  margin-bottom: 15px;
-  text-align: justify;  /* Justify text alignment for better readability */
-}
-
-/* Ensure the list items inside cards are aligned properly */
-#experience .card ul {
-  padding-left: 20px;
-}
-
-#experience .card ul li {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 15px; /* Space between list items */
-  line-height: 1.6; /* Make text more readable */
-  transition: 0.3s;
-}
-
-#experience .card ul li:hover {
-  color: var(--primary);
-  transform: translateX(6px);
-}
-
-/* Experience Header Section (Dates & Roles) */
-#experience .experience-header {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column; /* Stack date and role vertically */
-  gap: 10px; /* Space between date and role */
-}
-
-#experience .experience-date,
-#experience .experience-role {
-  font-weight: 600;
-  color: var(--text-muted);
-  font-size: 1rem;
-}
-
-#experience .experience-date {
-  margin-bottom: 5px; /* Adds space below the date */
-}
-
-#experience .experience-role {
-  font-size: 1.1rem;
-  color: var(--primary);
-}
-
-/* Increase font size for Education Section text */
-#education .card p {
-  font-size: 1.2rem;  /* Increase font size */
-  font-weight: 600;   /* Keep text bold */
-  line-height: 1.8;   /* Adjust line height for better readability */
-  margin-bottom: 15px; /* Ensure spacing between paragraphs */
-}
-
-/* Styling for Education Title and Degree (ensure equal spacing) */
-#education .card h3 {
-  font-size: 1.4rem;  /* Make the university name slightly larger */
-  font-weight: 700;
-  margin-bottom: 10px; /* Add space between the university and program */
-}
-
-/* Add spacing between different education cards */
-#education .card {
-  margin-bottom: 30px; /* Space between each card */
-}
-
-/* Optional: Style the dates for consistency */
-#education .card p:first-of-type {
-  font-size: 1.1rem;  /* Slightly smaller font size for the date */
-  color: var(--text-muted); /* Ensure it's still readable but subtle */
-}
-
-/* Ensure equal spacing between all sections */
-section + section {
-  margin-top: 0;
-}
+  padding
