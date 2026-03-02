@@ -262,14 +262,15 @@ section {
   transition: none;            /* no hover transition needed */
 }
 
+/* Designation label glow like Administrative */
 .designation-label {
   font-weight: 800;
-  font-size: 2.6rem; /* same as hero h2 */
-  background: linear-gradient(90deg, var(--primary), var(--secondary)); /* same gradient */
+  font-size: 2.6rem; /* adjust to your hero size */
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block; /* allows glow */
-  text-shadow: 0 0 10px rgba(56,189,248,0.4); /* glow same as Administrative */
+  display: inline-block; /* needed for glow effect */
+  text-shadow: 0 0 10px rgba(56,189,248,0.4); /* same glow as Administrative label */
 }
 
 /* CONTACT ICON STYLE */
