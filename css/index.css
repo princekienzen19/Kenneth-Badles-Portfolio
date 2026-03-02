@@ -258,6 +258,16 @@ section {
   transition: all 0.3s ease;
 }
 
+/* CONTACT ROW HOVER EFFECT */
+#contact .card p {
+  transition: 0.3s ease;
+}
+
+#contact .card p:hover {
+  transform: translateX(6px);
+  text-shadow: 0 0 10px rgba(56,189,248,0.5);
+}
+
 .contact-icon:hover {
   transform: scale(1.2);
   color: var(--secondary);
