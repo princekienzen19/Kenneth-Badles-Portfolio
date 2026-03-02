@@ -359,3 +359,12 @@ footer {
 section + section {
   margin-top: 0;
 }
+
+.gradient-text {
+  font-weight: 800; /* match section-title font weight */
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
