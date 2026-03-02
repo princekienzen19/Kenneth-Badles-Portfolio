@@ -283,19 +283,6 @@ section {
   transform: translateX(6px);
 }
 
-/* LIST */
-.card ul {
-  padding-left: 20px;
-  list-style-type: disc; /* Ensure bullets are visible */
-}
-
-.card ul li {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
-
 .card ul li:hover {
   color: var(--primary);
   transform: translateX(6px);
