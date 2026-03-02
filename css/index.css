@@ -80,19 +80,21 @@ header h1 a {
   color: var(--text-main); /* Ensure the color matches the rest of the text */
 }
 
-/* NAV */
+/* Apply the cursive font and ensure proper link styling */
 nav a {
-  color: var(--text-muted);
+  font-family: 'Dancing Script', 'Cursive', 'Segoe Script', 'Brush Script MT', sans-serif;  /* Cursive font */
+  font-size: 18px;  /* Optional: Adjust the size of the font */
+  color: var(--text-muted);  /* Default link color */
   margin-right: 25px;
-  text-decoration: none;
-  font-weight: 600;
+  text-decoration: none;  /* Remove underline */
+  font-weight: 600;  /* Adjust weight */
   position: relative;
-  transition: 0.3s;
+  transition: 0.3s;  /* Smooth hover effect */
 }
 
 nav a:hover {
-  color: var(--primary);
-  text-shadow: var(--glow-primary);
+  color: var(--primary);  /* Color change on hover */
+  text-shadow: var(--glow-primary);  /* Glow effect on hover */
 }
 
 nav a::after {
@@ -107,20 +109,7 @@ nav a::after {
 }
 
 nav a:hover::after {
-  width: 100%;
-}
-
-/* Add this CSS to your stylesheet or inside <style> tag in the HTML */
-nav a {
-  font-family: 'Cursive', 'Segoe Script', 'Brush Script MT', sans-serif;
-  font-size: 18px; /* Optional: Adjust the size of the font */
-  text-decoration: none; /* Removes underline from links */
-  color: #333; /* Optional: Change the text color */
-  transition: all 0.3s ease; /* Optional: smooth hover effect */
-}
-
-nav a:hover {
-  color: #007BFF; /* Optional: Change color on hover */
+  width: 100%;  /* Underline effect on hover */
 }
 
 
