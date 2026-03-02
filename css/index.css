@@ -74,6 +74,11 @@ header h1 {
   -webkit-text-fill-color: transparent;
 }
 
+/* Remove underline from the clickable name */
+header h1 a {
+  text-decoration: none;  /* Remove underline */
+  color: var(--text-main); /* Ensure the color matches the rest of the text */
+}
 
 /* NAV */
 nav a {
